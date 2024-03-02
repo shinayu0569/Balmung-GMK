@@ -1,4 +1,8 @@
 
+x_creation = x
+y_creation = y
+
+p_dir = 0
 spd = 0.5
 xsp = 0
 ysp = 0

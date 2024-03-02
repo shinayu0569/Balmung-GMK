@@ -2,36 +2,36 @@
 // You can write your code in this editor
 
 //check for arrow keys pressed
-if keyboard_check(vk_up) {
-    if keyboard_check(vk_left) {
+if sign(ysp) = -1 {
+    if sign(xsp) = -1 {
         //up-left diagonal
-        direction = 3;
-    } else if keyboard_check(vk_right) {
+        p_dir = 3;
+    } else if sign(xsp) = 1 {
         //up-right diagonal
-        direction = 1;
+        p_dir = 1;
     } else {
         //up
-        direction = 2;
+        p_dir = 2;
     }
-} else if keyboard_check(vk_down) {
-    if keyboard_check(vk_left) {
+} else if sign(ysp) = 1 {
+    if sign(xsp) = -1 {
         //down-left diagonal
-        direction = 5;
-    } else if keyboard_check(vk_right) {
+        p_dir = 5;
+    } else if sign(xsp) = 1 {
         //down-right diagonal
-        direction = 7;
+        p_dir = 7;
     } else {
         //down
-        direction = 6;
+        p_dir = 6;
     }
-} else if keyboard_check(vk_left) {
+} else if sign(xsp) = -1 {
     //left
-    direction = 4;
-} else if keyboard_check(vk_right) {
+    p_dir = 4;
+} else if sign(xsp) = 1 {
     //right
-    direction = 0;
+    p_dir = 0;
 }
 
-direction = direction * 45
+direction = p_dir * 45
 
 show_debug_message("Direction: \n" + string(direction))

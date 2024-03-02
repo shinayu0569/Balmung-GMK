@@ -12,8 +12,11 @@ key = {
 event_inherited();
 #region Movimentação & Colisão
 if sword = 0{
-		xsp = spd * (key.right - key.left)
-		ysp = spd * (key.down - key.up)
+	xsp = spd * (key.right - key.left)
+	ysp = spd * (key.down - key.up)
+} else {
+	xsp = 0
+	ysp = 0
 }
 
 if xsp != 0 or ysp != 0{
@@ -25,7 +28,36 @@ if xsp != 0 or ysp != 0{
 
 #region Attack & Defense
 if key.atk and sword = 0{
-	instance_create_depth(x,y,depth,oSword)
+	
+	switch (direction) {
+	    case 0:
+			
+	        break;
+	    case 45:
+			
+	        break;
+	    case 90:
+			
+	        break;
+	    case 135:
+			
+	        break;
+	    case 180:
+			
+	        break;
+	    case 225:
+			
+	        break;
+	    case 270:
+			
+	        break;
+	    case 315:
+			
+	        break;
+	}
+	
+	instance_create_depth(x_creation,y_creation,depth,oSword)
+	sword = 1
 }
 #endregion
 
